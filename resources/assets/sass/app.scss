@@ -1,2 +1,48 @@
-// @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+@import "../../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
 
+.container {
+  margin: auto;
+  width: 80%;
+}
+
+.panel-padding {
+  margin: 10px auto 10px auto;
+}
+
+.nav-btn-width {
+  min-width: 100%;
+}
+
+.float-glyph-right {
+  float: right;
+}
+
+.navbar-collapse.in {
+  overflow-y: visible;
+}
+
+.btn-width {
+  width: 100%;
+}
+
+.btn-block-container {
+  max-width: 300px;
+  margin: auto;
+}
+
+.panel-heading-container {
+  display: inline-block;
+  width: 100%;
+}
+
+.panel-title-text {
+  float: left;
+}
+
+.panel-title-return {
+  float: right;
+}
+
+.alert-block {
+  margin: 10px;
+}

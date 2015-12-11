@@ -1,16 +1,43 @@
-var elixir = require('laravel-elixir');
+var elixir = require("laravel-elixir");
+var gulp = require("gulp");
+var del = require("del");
 
-/*
- |--------------------------------------------------------------------------
- | Elixir Asset Management
- |--------------------------------------------------------------------------
- |
- | Elixir provides a clean, fluent API for defining some basic Gulp tasks
- | for your Laravel application. By default, we are compiling the Sass
- | file for our application, as well as publishing vendor resources.
- |
- */
+var production = elixir.config.production;
+var log = elixir.Log;
+var task = elixir.Task;
+
+var paths = {
+    "jquery": "./node_modules/jquery/dist/",
+    "bootstrap": "./node_modules/bootstrap-sass/assets/"
+}
+
+elixir.extend("cleanbundles", function(ifProd) {
+    new task("cleanbundles", function() {
+        if (ifProd) {
+            log.heading("Deleting Bundle Files and Folders...");
+            del(["public/css/**", "public/js/**"], function (err, paths) {
+                (!err && log.files(paths)) || log.heading(err);
+            });
+        } else {
+            log.heading("DEV mode; not deleting files!");
+        }
+    });
+ });
 
 elixir(function(mix) {
-    mix.sass('app.scss');
+    mix.sass("app.scss", "public/css/bundle.css");
+
+    mix.browserify(["index.js"], "public/js/app.js");
+
+    mix.scripts([
+            paths.jquery + "jquery.js",
+            paths.bootstrap + "javascripts/bootstrap.js",
+            "./public/js/app.js"
+        ], "public/js/bundle.js");
+
+    mix.version(["public/js/bundle.js", "public/css/bundle.css"]);
+
+    mix.copy(paths.bootstrap + "fonts/bootstrap/**", "public/build/fonts/bootstrap");
+
+    mix.cleanbundles(production);
 });
