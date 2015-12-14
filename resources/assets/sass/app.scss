@@ -1,5 +1,9 @@
 @import "../../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
 
+$fa-font-path: "../fonts/font-awesome";
+
+@import "../../../node_modules/font-awesome/scss/font-awesome.scss";
+
 .container {
   margin: auto;
   width: 80%;
@@ -30,19 +34,32 @@
   margin: auto;
 }
 
-.panel-heading-container {
-  display: inline-block;
-  width: 100%;
+.tile {
+  background-color: #F8F8F8;
+  padding: 15px;
+  margin: 8px 0px;
+  box-shadow: 5px 5px 3px #B8B8B8;
 }
 
-.panel-title-text {
-  float: left;
+ul {
+  list-style-type:none;
 }
 
-.panel-title-return {
-  float: right;
+.line-separator {
+  padding: 10px 20px 0 20px;
+  border-bottom: 1px solid #f0f0f0;
+  margin-bottom: 20px;
 }
 
-.alert-block {
-  margin: 10px;
+.center-text {
+  text-align: center;
+}
+
+.center-img {
+  display:block;
+  margin:auto;
+}
+
+.icon-padding {
+  padding: 5px;
 }

@@ -1,6 +1,10 @@
 <!-- Footer Section -->
 <!-- JS Bundle -->
 <script src="{{ elixir('js/bundle.js') }}"></script>
+<!-- Global Vars -->
+<script>
+  var __MOUNT_PREFIX__ = "{{ Request::url() }}"
+</script>
 <!-- React App Loader -->
 <script>
   (function() {
