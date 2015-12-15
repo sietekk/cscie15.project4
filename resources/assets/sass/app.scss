@@ -1,16 +1,25 @@
-@import "../../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+@import url("https://fonts.googleapis.com/css?family=Open%20Sans");
+$font-family-sans-serif: "Open Sans", sans-serif;
+$font-family-serif: "Open Sans";
+@import "../../../node_modules/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
 
 $fa-font-path: "../fonts/font-awesome";
-
 @import "../../../node_modules/font-awesome/scss/font-awesome.scss";
+
+$imgKey: random(2);
+$list: sos, navy_blue;
+$nth: nth($list, $imgKey);
+.background {
+  background-image: url('/build/img/#{$nth}.png');
+  background-repeat: repeat;
+  //background-repeat: no-repeat;
+  //background-attachment: fixed;
+  //background-size: cover;
+}
 
 .container {
   margin: auto;
-  width: 80%;
-}
-
-.panel-padding {
-  margin: 10px auto 10px auto;
+  width: 100%;
 }
 
 .nav-btn-width {
@@ -37,17 +46,21 @@ $fa-font-path: "../fonts/font-awesome";
 .tile {
   background-color: #F8F8F8;
   padding: 15px;
-  margin: 8px 0px;
-  box-shadow: 5px 5px 3px #B8B8B8;
+  margin: 20px 0px;
+  //box-shadow: 5px 5px 3px #B8B8B8;
 }
 
-ul {
+.profile-ul {
   list-style-type:none;
+}
+
+.block-paragraph {
+  padding-left: 25px;
 }
 
 .line-separator {
   padding: 10px 20px 0 20px;
-  border-bottom: 1px solid #f0f0f0;
+  border-bottom: 1px solid #DADADA;
   margin-bottom: 20px;
 }
 
@@ -62,4 +75,9 @@ ul {
 
 .icon-padding {
   padding: 5px;
+}
+
+.skill-btn-margin {
+  margin: 0px 5px;
+  border-radius: 0px !important;
 }

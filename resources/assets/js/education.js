@@ -5,10 +5,91 @@ import React from 'react';
 export default class Education extends React.Component {
 
   render() {
+
+    let data = this.props.data;
+
+    let lastIndex = data.length - 1;
+    let institutions = data.map(
+      (institution, index) =>
+        <Institution
+          key={index}
+          institution={institution.institution}
+          area={institution.area}
+          startDate={institution.startDate}
+          endDate={institution.endDate}
+          studyType={institution.studyType}
+          courses={institution.courses}
+          showDivider={(index === lastIndex) ? false : true}
+        />
+    );
+
     return (
-      <div className="tile">Education goes here!</div>
+      <div className="tile">
+        <h4 className="center-text">Education</h4>
+        <div className="line-separator" />
+        {institutions}
+      </div>
     );
   }
+}
 
+class Institution extends React.Component {
+
+  render() {
+
+    let dates = '';
+    if (isEmpty(this.props.endDate)) {
+      dates = this.props.startDate;
+    } else {
+      dates = this.props.startDate + ' - ' + this.props.endDate;
+    }
+
+    let studies = '';
+    if (isEmpty(this.props.studyType)) {
+      studies = this.props.area;
+    } else {
+      studies = this.props.studyType + ' - ' + this.props.area;
+    }
+
+    let courses = this.props.courses.map(
+      (course, index) =>
+        <Course
+          key={index}
+          course={course}
+        />
+    );
+
+    return (
+      <div key={this.props.key}>
+        <h4>{this.props.institution}</h4>
+        <h6>{studies}</h6>
+        <div>
+          <label>{dates}</label>
+        </div>
+        <div>
+          <label>Courses</label>
+          <ul>
+            {courses}
+          </ul>
+        </div>
+        {this.props.showDivider && <div className="line-separator" />}
+      </div>
+    );
+  }
+}
+
+class Course extends React.Component {
+
+  render() {
+    return (
+      <li key={this.props.key}>
+        {this.props.course}
+      </li>
+    );
+  }
+}
+
+function isEmpty(str) {
+    return (!str || 0 === str.length);
 }
 

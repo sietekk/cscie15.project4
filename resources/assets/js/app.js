@@ -34,8 +34,8 @@ export default class App extends React.Component {
           <main className="col-md-8">
             <div>
               <Work data={work} />
-              <Skills data={skills} />
               <Education data={education} />
+              <Skills data={skills} />
             </div>
           </main>
         </div>

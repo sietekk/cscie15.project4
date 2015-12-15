@@ -2,7 +2,7 @@
 <html lang="en">
   @include('layouts.partials._head')
   <body>
-    <div class="container-fluid container">
+    <div class="container-fluid container background">
       @include('layouts.partials._navbar')
       <!-- Page Content -->
       <div id="main-container">

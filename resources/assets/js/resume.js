@@ -39,14 +39,14 @@ var resumeJSON =
         "endDate": "",
         "summary": "Technical Lead on largest migration account. Develop full-stack, customized, database-driven Python applications as member of the Professional Services Team. Front end development work with React/JSX to create comprehensive and custom user interfaces. Data modeling and maintenance performed with HTSQL on Postgres databases. Responsible for many parts of custom data migrations for several high profile clients, and the development and execution of ETL processes. Consistently employs the RexDB open source product stack on legacy and new stack systems in the Agile project management framework (Scrum).",
         "highlights": [
-          "Technical Lead on larges migration project",
+          "Technical Lead on largest migration project",
           "Manager of 100+ application and configuration repositories",
           "Tutors new hires and interns"
         ]
       },
       {
         "company": "Prometheus Research",
-        "position": "Intern - Software Engineering",
+        "position": "Data Management Intern",
         "website": "www.prometheusresearch.com",
         "startDate": "May 2014",
         "endDate": "October 2014",
@@ -62,12 +62,12 @@ var resumeJSON =
       {
         "institution": "Harvard University Extension School",
         "area": "Software Engineering",
-        "studyType": "",
+        "studyType": "Preliminary",
         "startDate": "September 2015",
         "endDate": "",
         "gpa": "",
         "courses": [
-          "Dynamic Web Applications"
+          "Dynamic Web Applications - Graduate Credit"
         ]
       },
       {
@@ -85,7 +85,7 @@ var resumeJSON =
           "Linear Algebra",
           "Electricity and Magnetism",
           "Six Independent Studies",
-          "Four graduate classes"
+          "Four Graduate Classes"
         ]
       }
     ],
@@ -132,13 +132,13 @@ var resumeJSON =
         "keywords": [
           "RexDB",
           "Python",
-          "Laravel/PHP",
-          ""
+          "Laravel",
+          "PHP"
         ]
       },
       {
         "name": "Frontend Development",
-        "level": "Intermediate",
+        "level": "Advanced",
         "keywords": [
           "RexWidget",
           "React",
