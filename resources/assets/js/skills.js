@@ -38,6 +38,7 @@ class Skill extends React.Component {
         <Button
           key={index}
           bsStyle="info"
+          bsSize="xsmall"
           className="skill-btn-margin"
         >
           {keyword}
