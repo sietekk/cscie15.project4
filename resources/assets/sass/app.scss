@@ -64,6 +64,19 @@ $nth: nth($list, $imgKey);
   margin-bottom: 20px;
 }
 
+.heading-container {
+  display: inline-block;
+  width: 100%;
+}
+
+.title-text {
+  float: left;
+}
+
+.title-date {
+  float: right;
+}
+
 .center-text {
   text-align: center;
 }

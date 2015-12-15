@@ -1,7 +1,7 @@
 'use strict';
 
 import React from 'react';
-import {Button} from 'react-bootstrap';
+import {Label} from 'react-bootstrap';
 
 export default class Skills extends React.Component {
 
@@ -35,14 +35,13 @@ class Skill extends React.Component {
 
     let keywords = this.props.keywords.map(
       (keyword, index) =>
-        <Button
+        <Label
           key={index}
           bsStyle="info"
-          bsSize="xsmall"
           className="skill-btn-margin"
         >
           {keyword}
-        </Button>
+        </Label>
     );
 
     return (

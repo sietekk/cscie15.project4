@@ -56,12 +56,16 @@ class WorkItem extends React.Component {
 
     return (
       <div key={this.props.key}>
-        <h4>
-          <a href={this.props.website}>{this.props.company}</a>
-        </h4>
-        <h6>{this.props.position}</h6>
-        <div>
-          <label>{dates}</label>
+        <div className="heading-container">
+          <div className="title-text">
+            <h4>
+              <a href={this.props.website}>{this.props.company}</a>
+            </h4>
+            <h6>{this.props.position}</h6>
+          </div>
+          <div className="title-date">
+            <h5>{dates}</h5>
+          </div>
         </div>
         <div>
           <label>Highlights</label>

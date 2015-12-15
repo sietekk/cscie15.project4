@@ -61,11 +61,15 @@ class Institution extends React.Component {
 
     return (
       <div key={this.props.key}>
-        <h4>{this.props.institution}</h4>
-        <h6>{studies}</h6>
-        <div>
-          <label>{dates}</label>
-        </div>
+        <div className="heading-container">
+          <div className="title-text">
+            <h4>{this.props.institution}</h4>
+            <h6>{studies}</h6>
+          </div>
+          <div className="title-date">
+            <h5>{dates}</h5>
+          </div>
+          </div>
         <div>
           <label>Courses</label>
           <ul>
