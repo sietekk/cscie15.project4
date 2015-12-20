@@ -1,23 +1,22 @@
 <!-- Footer Section -->
-<!-- JS Bundle -->
-<script src="{{ elixir('js/bundle.js') }}"></script>
 <!-- Global Vars -->
 <script>
-  var __MOUNT_PREFIX__ = "{{ Request::url() }}"
+  var __MOUNT_PREFIX__ = "{{ $MOUNT_PREFIX }}";
 </script>
+<!-- JS Bundle -->
+<script src="{{ elixir('js/bundle.js') }}"></script>
 <!-- React App Loader -->
 <script>
   (function() {
-    var __main__ = document.getElementById('__main__');
-
-    if (window.App === undefined) {
+    if (window.APP === undefined) {
       throw new Error('application not found');
     }
 
-    var __APP__ = App.appPayload;
+    var __main__ = document.getElementById('__main__');
+    var __app__ = APP.{{ $render_app }};
 
-    App.render(
-      __APP__,
+    APP.render(
+      __app__,
       __main__
     );    
   })();

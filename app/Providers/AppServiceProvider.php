@@ -13,7 +13,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        // Pass hostname to all views
+        view()->share('MOUNT_PREFIX', env('DB_HOST'));
     }
 
     /**

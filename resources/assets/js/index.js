@@ -1,6 +1,7 @@
 'use strict';
 
-module.exports = window.App = {
-  appPayload: require('./App'),
+module.exports = window.APP = {
+  main: require('./Main'),
+  resume: require('./Resume'),
   render: require('./render')
 };

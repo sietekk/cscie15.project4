@@ -7,16 +7,18 @@ use Illuminate\Http\Request;
 use Project4\Http\Requests;
 use Project4\Http\Controllers\Controller;
 
-class IndexController extends Controller
+class DataController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function resume()
     {
-        //Returns index view
-        return view('index')->with('render_app', 'main');
+        // Returns resume JSON
+        $resume = \Project4\Resume::first();
+        $json_data = json_decode($resume->resume_json);
+        return response()->json($json_data);
     }
 }

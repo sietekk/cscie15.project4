@@ -12,7 +12,7 @@ export default class Profile extends React.Component {
     return (
       <div className="tile">
         <div>
-          <Image className="center-img" src={__MOUNT_PREFIX__ + data.picture} circle />
+          <Image className="center-img" src={data.picture} circle />
           <h4 className="center-text">{data.name} </h4>
           <div className="center-text">{data.label}</div>
         </div>
