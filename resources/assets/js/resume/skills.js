@@ -2,6 +2,8 @@
 
 import React from 'react';
 import {Label} from 'react-bootstrap';
+import Tile from '../widget/Tile';
+import Line from '../widget/Line';
 
 export default class Skills extends React.Component {
 
@@ -20,11 +22,11 @@ export default class Skills extends React.Component {
     );
 
     return (
-      <div className="tile">
+      <Tile>
         <h4 className="center-text">Skills</h4>
-        <div className="line-separator" />
+        <Line />
         {skills}
-      </div>
+      </Tile>
     );
   }
 }

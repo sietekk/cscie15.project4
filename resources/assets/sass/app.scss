@@ -1,3 +1,5 @@
+@import "./preloader.scss";
+
 @import url("https://fonts.googleapis.com/css?family=Open%20Sans");
 $font-family-sans-serif: "Open Sans", sans-serif;
 $font-family-serif: "Open Sans";
@@ -6,15 +8,15 @@ $font-family-serif: "Open Sans";
 $fa-font-path: "../fonts/font-awesome";
 @import "../../../node_modules/font-awesome/scss/font-awesome.scss";
 
-$imgKey: random(2);
-$list: sos, navy_blue;
-$nth: nth($list, $imgKey);
+@import "./widget.scss";
+
 .background {
-  background-image: url('/build/img/#{$nth}.png');
-  background-repeat: repeat;
-  //background-repeat: no-repeat;
-  //background-attachment: fixed;
-  //background-size: cover;
+  //background-image: url('/build/img/circle-blue-background.jpg');
+  background-image: url('/build/img/raining-cubes.jpg');
+  //background-image: url('/build/img/space-trip.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
 }
 
 .container {
@@ -43,25 +45,12 @@ $nth: nth($list, $imgKey);
   margin: auto;
 }
 
-.tile {
-  background-color: #F8F8F8;
-  padding: 15px;
-  margin: 20px 0px;
-  //box-shadow: 5px 5px 3px #B8B8B8;
-}
-
 .profile-ul {
   list-style-type:none;
 }
 
 .block-paragraph {
   padding-left: 25px;
-}
-
-.line-separator {
-  padding: 10px 20px 0 20px;
-  border-bottom: 1px solid #DADADA;
-  margin-bottom: 20px;
 }
 
 .heading-container {

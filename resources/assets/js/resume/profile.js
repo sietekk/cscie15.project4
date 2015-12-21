@@ -2,6 +2,8 @@
 
 import React from 'react';
 import {Image} from 'react-bootstrap';
+import Tile from '../widget/Tile';
+import Line from '../widget/Line';
 
 export default class Profile extends React.Component {
 
@@ -10,17 +12,17 @@ export default class Profile extends React.Component {
     let data = this.props.data;
 
     return (
-      <div className="tile">
+      <Tile>
         <div>
           <Image className="center-img" src={data.picture} circle />
           <h4 className="center-text">{data.name} </h4>
           <div className="center-text">{data.label}</div>
         </div>
-        <div className="line-separator" />
+        <Line />
         <p className="center-text">
           {data.summary}
         </p>
-        <div className="line-separator" />
+        <Line />
         <ul className="list-unstyled text-center">
           <li>
             <span className="fa fa-lg fa-location-arrow icon-padding" />
@@ -31,7 +33,7 @@ export default class Profile extends React.Component {
             <a href="mailto:{data.email}">{data.email}</a>
           </li>
         </ul>
-        <div className="line-separator" />
+        <Line />
         <ul className="list-inline text-center">
           <li>
             <span className="fa fa-lg fa-github icon-padding" />
@@ -42,7 +44,7 @@ export default class Profile extends React.Component {
             <a href={data.profiles[1].url}>{data.profiles[1].network}</a>
           </li>
         </ul>
-      </div>
+      </Tile>
     );
   }
 

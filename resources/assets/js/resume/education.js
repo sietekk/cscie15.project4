@@ -1,6 +1,8 @@
 'use strict';
 
 import React from 'react';
+import Tile from '../widget/Tile';
+import Line from '../widget/Line';
 
 export default class Education extends React.Component {
 
@@ -24,11 +26,11 @@ export default class Education extends React.Component {
     );
 
     return (
-      <div className="tile">
+      <Tile>
         <h4 className="center-text">Education</h4>
-        <div className="line-separator" />
+        <Line />
         {institutions}
-      </div>
+      </Tile>
     );
   }
 }
@@ -76,7 +78,7 @@ class Institution extends React.Component {
             {courses}
           </ul>
         </div>
-        {this.props.showDivider && <div className="line-separator" />}
+        {this.props.showDivider && <Line />}
       </div>
     );
   }

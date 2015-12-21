@@ -9,8 +9,8 @@
     "summary": "Fullstack software engineer with a focus on Python and React/JSX.",
     "location": {
       "address": "",
-      "postalCode": "06512",
-      "city": "East Haven",
+      "postalCode": "",
+      "city": "",
       "countryCode": "US",
       "region": "Connecticut"
     },
@@ -31,7 +31,7 @@
     {
       "company": "Prometheus Research",
       "position": "Software Engineer",
-      "website": "www.prometheusresearch.com",
+      "website": "http://www.prometheusresearch.com",
       "startDate": "October 2014",
       "endDate": "",
       "summary": "Technical Lead on largest migration account. Develop full-stack, customized, database-driven Python applications as member of the Professional Services Team. Front end development work with React/JSX to create comprehensive and custom user interfaces. Data modeling and maintenance performed with HTSQL on Postgres databases. Responsible for many parts of custom data migrations for several high profile clients, and the development and execution of ETL processes. Consistently employs the RexDB open source product stack on legacy and new stack systems in the Agile project management framework (Scrum).",
@@ -44,7 +44,7 @@
     {
       "company": "Prometheus Research",
       "position": "Data Management Intern",
-      "website": "www.prometheusresearch.com",
+      "website": "http://www.prometheusresearch.com",
       "startDate": "May 2014",
       "endDate": "October 2014",
       "summary": "Support technical lead and senior business analyst on multiple client projects targeting database management, ETL development and execution, and data migration from legacy systems.",

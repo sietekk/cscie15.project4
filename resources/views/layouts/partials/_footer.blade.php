@@ -13,11 +13,15 @@
     }
 
     var __main__ = document.getElementById('__main__');
+    var __preloader__ = document.getElementById('__preloader__');
     var __app__ = APP.{{ $render_app }};
 
     APP.render(
       __app__,
-      __main__
+      __main__,
+      function() {
+        document.body.removeChild(__preloader__);
+      }
     );    
   })();
 </script>
