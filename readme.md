@@ -1,27 +1,68 @@
-## Laravel PHP Framework
+# CSCI E-15 Project 4
+# Personal Developer Blog and Resume
 
-[![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
-[![Total Downloads](https://poser.pugx.org/laravel/framework/d/total.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Stable Version](https://poser.pugx.org/laravel/framework/v/stable.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Unstable Version](https://poser.pugx.org/laravel/framework/v/unstable.svg)](https://packagist.org/packages/laravel/framework)
-[![License](https://poser.pugx.org/laravel/framework/license.svg)](https://packagist.org/packages/laravel/framework)
+## Live URL
+<http://p4.sietekk.com>
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as authentication, routing, sessions, queueing, and caching.
+## Description
+#### Info
+This application serves as a personal blog and resume website, and was written in React/JSX with a JSON API and Laravel 5.1 on the backend.
 
-Laravel is accessible, yet powerful, providing powerful tools needed for large, robust applications. A superb inversion of control container, expressive migration system, and tightly integrated unit testing support give you the tools you need to build any application with which you are tasked.
+#### Validation
+Validation is not implemented yet.
 
-## Official Documentation
+#### Task Runner
+##### Development
+This application uses NPM, Gulp, and Laravel's Elixir for the task runner workflow:
 
-Documentation for the framework can be found on the [Laravel website](http://laravel.com/docs).
+1. Run `npm install` to install necessary dependencies to the `node_modules` directory.
+2. Run `gulp` to compile, bundle, and version all Sass/CSS and JavaScript into the `build/` directory.
 
-## Contributing
+##### Production
+1. Run `npm install` to install necessary dependencies to the `node_modules` directory.
+2. Run `gulp --production` to not only bundle and version all Sass/CSS and JavaScript, but also remove intermediary bundles and directories.
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](http://laravel.com/docs/contributions).
+#### Push-to-Deploy
+For deployment to a VPS, please follow the intitial instructions [here](https://www.digitalocean.com/community/tutorials/how-to-set-up-automatic-deployment-with-git-with-a-vps) and for the git post-receive hook, please use this bash script and place it in the correct directory:
+```
+#!/bin/bash
+while read oldrev newrev ref
+do
+    if [[ $ref =~ .*/master$ ]];
+    then
+        echo "Master ref received. Deploying master branch to production..."
+        git --work-tree=/var/www/dwa15/cscie15.project3 --git-dir=/home/michael/repo/cscie15.project3.git checkout -f
+        echo "Changing to work tree directory..."
+        cd /var/www/dwa15/cscie15.project3
+        echo "Running composer to build application..."
+        composer install
+        echo "Running NPM installation..."
+        npm install
+        echo "Running Gulp in production mode..."
+        gulp --production
+        echo "Production push complete..."
+    else
+        echo "Ref $ref successfully received.  Doing nothing: only the master branch may be deployed on this server."
+    fi
+done
+```
 
-## Security Vulnerabilities
+#### APIs
+##### Application
+The applications accept POST requests made to themselves with following URLs:
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
+| JSON API URL               |  Data Returned                                                             |
+| -------------------------- | -------------------------------------------------------------------------- |
+| `.../api/blog`             |  Returns blog data as JSON object                                          |
+| `.../api/resume`           |  Returns resume data as JSON object                                        |
 
-### License
+## Demo
 
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
+## Details for teaching team
+The site is running in production mode, so the CSS and JS bundles are minified and versioned. There is no login, as the Admin section has not been developed yet.
+
+## Outside code
+* jQuery: <https://jquery.com/>
+* Bootstrap: <http://getbootstrap.com/>
+* Background Image: Lost the link -- not attributable to myself
+
