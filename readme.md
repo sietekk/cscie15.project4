@@ -43,6 +43,8 @@ do
         npm install
         echo "Running Gulp in production mode..."
         gulp --production
+        echo "Running database migration..."
+        echo "y" | php artisan migrate
         echo "Production push complete..."
     else
         echo "Ref $ref successfully received.  Doing nothing: only the master branch may be deployed on this server."
