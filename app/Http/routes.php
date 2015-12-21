@@ -18,6 +18,7 @@ Route::get('/resume', 'ResumeController@index');
 // API JSON Routes
 Route::group(['prefix' => 'api'], function () {
     Route::get('resume', 'DataController@resume');
+    Route::get('blog', 'DataController@blog');
 });
 
 // DB Debug Route

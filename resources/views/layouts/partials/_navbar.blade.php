@@ -48,6 +48,8 @@
               </button>
               <ul class="dropdown-menu nav-btn-width" aria-labelledby="project4Menu">
                 <li><a href="http://p4.sietekk.com">View Project 4</a></li>
+                <li><a href="http://p4.sietekk.com/resume">Resume</a></li>
+                <li><a href="http://p4.sietekk.com/admin">Admin</a></li>
                 <li><a href="https://github.com/sietekk/cscie15.project4">Project 4 Source Code</a><li>
               </ul>
           </li>

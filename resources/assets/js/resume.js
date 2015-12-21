@@ -6,6 +6,7 @@ import Profile from './resume/profile';
 import Work from './resume/work';
 import Skills from './resume/skills';
 import Education from './resume/education';
+import NavBar from './widget/NavBar';
 
 export default class Resume extends React.Component {
   constructor(props) {
@@ -34,12 +35,12 @@ export default class Resume extends React.Component {
 
   renderLoading() {
     return (
-      <div>Loading...</div>
+      <div />
     );
   }
 
   renderResume() {
-console.log('+++', this.state.data.resume_data);
+
     let profile = this.state.data.basics;
     let work = this.state.data.work;
     let skills = this.state.data.skills;
@@ -47,6 +48,7 @@ console.log('+++', this.state.data.resume_data);
 
     return (
       <div className="container">
+        <NavBar />
         <div className="row">
           <aside className="col-md-4">
             <div>
@@ -67,8 +69,5 @@ console.log('+++', this.state.data.resume_data);
 
 }
 
-Resume.defaultProps =
-  {
-    resumeURL: 'api/resume',
-  };
+Resume.defaultProps = {resumeURL: 'api/resume',};
 

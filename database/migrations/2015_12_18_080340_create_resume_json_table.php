@@ -14,7 +14,6 @@ class CreateResumeJsonTable extends Migration
     {
         // Creates table 'resumes' that holds resume JSON
         Schema::create('resumes', function (Blueprint $table) {
-
             $table->increments('id');
             $table->timestamps();
             $table->date('date_uploaded');

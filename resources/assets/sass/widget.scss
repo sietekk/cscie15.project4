@@ -14,3 +14,29 @@
   border-bottom: 1px solid #B3B3B3;
   margin-bottom: 20px;
 }
+
+.nav-tile {
+  color: aliceblue;
+  background-color: rgba(43, 43, 43, 0.8);
+  margin: 20px 0px;
+  box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.39);
+  color: aliceblue;
+  border: 0px;
+  border-radius: 0px;
+}
+
+.navbar-nav > li > a {
+  color: #337AB7 !important;
+}
+
+.navbar-right {
+    margin-top: 10px;
+}
+
+.navbar-brand {
+    color: aliceblue !important;
+}
+
+.small-color {
+    color: #9FACB7 !important;
+}

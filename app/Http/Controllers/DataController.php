@@ -21,4 +21,13 @@ class DataController extends Controller
         $json_data = json_decode($resume->resume_json);
         return response()->json($json_data);
     }
+
+    public function blog()
+    {
+        // Returns last five blog entries
+        $blog_items = \Project4\Blog::orderBy('id','descending')->get();
+        $chunk = $blog_items->take(5);
+        return response()->json($chunk);
+        
+    }
 }
