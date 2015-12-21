@@ -8,6 +8,9 @@
 #### Info
 This application serves as a personal blog and resume website, and was written in React/JSX with a JSON API and Laravel 5.1 on the backend.
 
+#### TODO
+Need to implement Admin interface with CRUD operations on database. These features are not yet implemented.
+
 #### Validation
 Validation is not implemented yet.
 
