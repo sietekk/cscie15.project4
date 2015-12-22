@@ -6,7 +6,7 @@ import Profile from './resume/profile';
 import Work from './resume/work';
 import Skills from './resume/skills';
 import Education from './resume/education';
-import NavBar from './widget/NavBar';
+import NavBar from './widget/navbar';
 
 export default class Resume extends React.Component {
   constructor(props) {

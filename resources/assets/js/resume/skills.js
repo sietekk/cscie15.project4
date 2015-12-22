@@ -2,8 +2,8 @@
 
 import React from 'react';
 import {Label} from 'react-bootstrap';
-import Tile from '../widget/Tile';
-import Line from '../widget/Line';
+import Tile from '../widget/tile';
+import Line from '../widget/line';
 
 export default class Skills extends React.Component {
 

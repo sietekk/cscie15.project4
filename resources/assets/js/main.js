@@ -1,9 +1,9 @@
 'use strict';
 
 import React from 'react';
-import Tile from './widget/Tile';
-import Line from './widget/Line';
-import NavBar from './widget/NavBar';
+import Tile from './widget/tile';
+import Line from './widget/line';
+import NavBar from './widget/navbar';
 import {Image, Button} from 'react-bootstrap';
 
 export default class Main extends React.Component {
