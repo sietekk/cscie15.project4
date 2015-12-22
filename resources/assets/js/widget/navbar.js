@@ -1,7 +1,7 @@
 'use strict';
 
 import React from 'react';
-import NavTile from './NavTile';
+import NavTile from './navtile';
 import {Navbar, Nav, NavItem} from 'react-bootstrap';
 
 export default class NavBar extends React.Component {
